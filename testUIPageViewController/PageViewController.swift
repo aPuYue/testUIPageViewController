@@ -13,6 +13,8 @@ class PageViewController: UIPageViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.dataSource = self
 
         initPageView()
     }
@@ -32,7 +34,6 @@ class PageViewController: UIPageViewController {
                            completion: nil)
         
         // PageViewControllerのDataSourceとの関連付け
-        self.dataSource = self
     }
 
 
