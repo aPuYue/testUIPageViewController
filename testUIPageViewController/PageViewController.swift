@@ -17,7 +17,26 @@ class PageViewController: UIPageViewController {
         self.dataSource = self
 
         initPageView()
+        setupNotification()
     }
+
+    private func setupNotification() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(didClick),//触发什么函数
+            name: NSNotification.Name(rawValue: "DidClick"),//自定义名称
+            object: nil
+        )
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(
+            self,
+            name: NSNotification.Name(rawValue: "DidClick"),
+            object: nil
+        )
+    }
+
     
     func initPageView(){
         // PageViewControllerで表示するViewControllerをインスタンス化
@@ -27,7 +46,7 @@ class PageViewController: UIPageViewController {
         // インスタンス化したViewControllerを配列に追加
         self.controllers = [ firstVC, secondVC ]
         
-        // 最初に表示するViewControllerを指定する
+        // 最初に表示するViewControllerを指定する //默认移动到这里
         setViewControllers([self.controllers[0]],
                            direction: .forward,
                            animated: true,
@@ -36,6 +55,16 @@ class PageViewController: UIPageViewController {
         // PageViewControllerのDataSourceとの関連付け
     }
 
+    @objc func didClick(notification: Notification) {
+        if let index = notification.object as? Int {
+            switch index {
+            case 0:
+                self.setViewControllers([self.controllers[0]], direction: .reverse, animated: true, completion: nil)//注意从2回到1是往前翻页
+            default:
+                self.setViewControllers([self.controllers[1]], direction: .forward, animated: true, completion: nil)
+            }
+        }
+    }
 
 }
 

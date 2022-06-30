@@ -22,16 +22,36 @@
                                     <segue destination="fVK-yE-h5M" kind="embed" id="f78-ie-svF"/>
                                 </connections>
                             </containerView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bsH-sJ-lUv">
+                                <rect key="frame" x="50" y="44" width="314" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="c8f-jl-gDi"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="didClick:" destination="DoH-cx-o24" eventType="valueChanged" id="m1p-6c-bOa"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vBf-sx-3qE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="bsH-sJ-lUv" firstAttribute="top" secondItem="vBf-sx-3qE" secondAttribute="top" id="5qZ-By-Fll"/>
                             <constraint firstItem="vBf-sx-3qE" firstAttribute="bottom" secondItem="wsK-96-MdA" secondAttribute="bottom" constant="50" id="atC-xT-y9c"/>
+                            <constraint firstItem="vBf-sx-3qE" firstAttribute="trailing" secondItem="bsH-sJ-lUv" secondAttribute="trailing" constant="50" id="gMJ-cr-ngr"/>
+                            <constraint firstItem="bsH-sJ-lUv" firstAttribute="leading" secondItem="vBf-sx-3qE" secondAttribute="leading" constant="50" id="omx-WI-Qxq"/>
                             <constraint firstItem="vBf-sx-3qE" firstAttribute="trailing" secondItem="wsK-96-MdA" secondAttribute="trailing" constant="50" id="rYS-L2-abW"/>
                             <constraint firstItem="wsK-96-MdA" firstAttribute="top" secondItem="vBf-sx-3qE" secondAttribute="top" constant="50" id="vGE-ym-4yy"/>
                             <constraint firstItem="wsK-96-MdA" firstAttribute="leading" secondItem="vBf-sx-3qE" secondAttribute="leading" constant="50" id="vbe-qt-A1m"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="containerView" destination="wsK-96-MdA" id="nQe-V6-fM0"/>
+                        <outlet property="switchButton" destination="bsH-sJ-lUv" id="gzy-0g-jFL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1lU-m0-f03" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
