@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B402C254286D792D000055AF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B402C253286D792D000055AF /* MainViewController.swift */; };
 		CEE6EFF227DEE39D008C65DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE6EFF127DEE39D008C65DB /* AppDelegate.swift */; };
 		CEE6EFF427DEE39D008C65DB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE6EFF327DEE39D008C65DB /* SceneDelegate.swift */; };
 		CEE6EFF627DEE39D008C65DB /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE6EFF527DEE39D008C65DB /* PageViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B402C253286D792D000055AF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CEE6EFEE27DEE39D008C65DB /* testUIPageViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testUIPageViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE6EFF127DEE39D008C65DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEE6EFF327DEE39D008C65DB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			children = (
 				CEE6EFF127DEE39D008C65DB /* AppDelegate.swift */,
 				CEE6EFF327DEE39D008C65DB /* SceneDelegate.swift */,
+				B402C253286D792D000055AF /* MainViewController.swift */,
 				CEE6EFF527DEE39D008C65DB /* PageViewController.swift */,
 				CEE6F00827DEFDD3008C65DB /* FirstViewController.swift */,
 				CEE6F00A27DEFDFB008C65DB /* SecondViewController.swift */,
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B402C254286D792D000055AF /* MainViewController.swift in Sources */,
 				CEE6F00B27DEFDFB008C65DB /* SecondViewController.swift in Sources */,
 				CEE6F00927DEFDD3008C65DB /* FirstViewController.swift in Sources */,
 				CEE6EFF627DEE39D008C65DB /* PageViewController.swift in Sources */,

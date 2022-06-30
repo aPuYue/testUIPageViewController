@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fVK-yE-h5M">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DoH-cx-o24">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -8,6 +8,35 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="p43-Hp-5Se">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DoH-cx-o24" customClass="MainViewController" customModule="testUIPageViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3tz-Fa-4Yt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wsK-96-MdA">
+                                <rect key="frame" x="50" y="94" width="314" height="718"/>
+                                <connections>
+                                    <segue destination="fVK-yE-h5M" kind="embed" id="f78-ie-svF"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vBf-sx-3qE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vBf-sx-3qE" firstAttribute="bottom" secondItem="wsK-96-MdA" secondAttribute="bottom" constant="50" id="atC-xT-y9c"/>
+                            <constraint firstItem="vBf-sx-3qE" firstAttribute="trailing" secondItem="wsK-96-MdA" secondAttribute="trailing" constant="50" id="rYS-L2-abW"/>
+                            <constraint firstItem="wsK-96-MdA" firstAttribute="top" secondItem="vBf-sx-3qE" secondAttribute="top" constant="50" id="vGE-ym-4yy"/>
+                            <constraint firstItem="wsK-96-MdA" firstAttribute="leading" secondItem="vBf-sx-3qE" secondAttribute="leading" constant="50" id="vbe-qt-A1m"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1lU-m0-f03" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1391" y="-601"/>
+        </scene>
         <!--Page View Controller-->
         <scene sceneID="1dB-Yd-ygF">
             <objects>
@@ -48,6 +77,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
